@@ -1,23 +1,51 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from './views/Home.vue';
+import Vue from 'vue'
+import Router from 'vue-router'
+import Login from './components/Login.vue'
+import Home from './components/Home.vue'
+import About from './components/About.vue'
 
-Vue.use(Router);
+// texts
+import Texts from './components/texts/Index.vue'
+
+// students
+import Students from './components/students/Index.vue'
+
+// kem
+import KEM from './components/kem/Index.vue'
+
+Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home,
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
-    },
-  ],
+	routes: [
+		{
+			path: '/',
+			name: 'home',
+			component: Home,
+		},
+		{
+			path: '/texts',
+			name: 'texts',
+			component: Texts,
+		},
+		{
+			path: '/students',
+			name: 'students',
+			component: Students,
+		},
+		{
+			path: '/kem',
+			name: 'kem',
+			component: KEM
+		},
+		{
+			path: '/login',
+			name: 'login',
+			component: Login,
+		},
+    	{
+			path: '/about',
+			name: 'about',
+			component: About,
+		},
+	],
 });
