@@ -79,7 +79,7 @@ export default {
     },
 
     mounted() {
-        axios.post("http://apikem.asmilahotel.space/getBacaan", {
+        axios.post("https://cors-anywhere.herokuapp.com/http://apikem.asmilahotel.space/getBacaan", {
             'id_user': 1,
             'id_bacaan': 1
         }).then(response => {
