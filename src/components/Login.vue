@@ -58,7 +58,7 @@
 export default {
     data () {
         return {
-            url: 'http://apikem.asmilahotel.space/login',
+            url: 'https://cors-anywhere.herokuapp.com/http://apikem.asmilahotel.space/login',
             message: '',
             messageNISN: '',
             messagePass: '',
